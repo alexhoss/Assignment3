@@ -40,13 +40,5 @@ int main() {
     cout << "Empty: " << HospitalDispatch::get_instance().get_value().isEmpty() << endl;
 
 
-
-
-
-
-
-
-
-
     return 0;
 }

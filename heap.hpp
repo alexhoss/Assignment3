@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <vector>
 #include <iostream>
+
 #ifndef ASSIGNMENT3_HEAP_HPP
 #define ASSIGNMENT3_HEAP_HPP
 using namespace std;
@@ -28,7 +29,7 @@ private:
 public:
 
 
-    heap(container &c) {
+    explicit heap(container &c) {
         for (auto it = c.begin(); it != c.end(); it++) {
             arr.push_back(*it);
         }
@@ -40,8 +41,9 @@ public:
      * Pop root element off the heap and heapify
      */
     element pop() {
-        if (size() == 0){ cout << "Already empty, returning 0  " << endl;
-        return 0;
+        if (size() == 0) {
+            cout << "Already empty, returning 0  " << endl;
+            return 0;
 
         }
         element temp = arr[0];
@@ -72,21 +74,12 @@ public:
         return arr.empty();
     }
 
-    friend ostream& operator<<(ostream& os, heap hp){
-        for(auto it = hp.arr.begin(); it != hp.arr.end(); it++)
+    friend ostream &operator<<(ostream &os, heap hp) {
+        for (auto it = hp.arr.begin(); it != hp.arr.end(); it++)
             os << *it << " ";
         os << endl;
         return os;
     }
-
-
-    void print() {
-
-        for (auto it = arr.begin(); it != arr.end(); it++) {
-            cout << *it << " ";
-        }
-        cout << endl;
-    };
 
 
 };
