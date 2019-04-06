@@ -30,7 +30,6 @@ public:
 
     heap(container &c) {
         for (auto it = c.begin(); it != c.end(); it++) {
-            cout << *it << endl;
             arr.push_back(*it);
         }
         heapify();
@@ -41,6 +40,10 @@ public:
      * Pop root element off the heap and heapify
      */
     element pop() {
+        if (size() == 0){ cout << "Already empty, returning 0  " << endl;
+        return 0;
+
+        }
         element temp = arr[0];
         arr.erase(arr.begin());
         heapify();
