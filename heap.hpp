@@ -66,6 +66,12 @@ public:
     size_t size() {
         return arr.size();
     }
+ /*
+  * Clears the heap
+  */
+ void clear(){
+     arr.clear();
+ }
 
     /*
      * return true if heap is empty

@@ -26,12 +26,9 @@ int main() {
 
     cout << "Queue Size: " << HospitalDispatch::get_instance().get_value().size() << endl;
 
-    cout << "Pop four times" << endl;
+    cout << "Clear the Heap" << endl;
 
-    HospitalDispatch::get_instance().get_value().pop();
-    HospitalDispatch::get_instance().get_value().pop();
-    HospitalDispatch::get_instance().get_value().pop();
-    HospitalDispatch::get_instance().get_value().pop();
+    HospitalDispatch::get_instance().get_value().clear();
     cout << "Queue Size: " << HospitalDispatch::get_instance().get_value().size() << endl;
 
     cout << "Pop once more" << endl;
