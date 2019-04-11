@@ -8,7 +8,9 @@
 #ifndef ASSIGNMENT3_HOSPITALDISPATCH_HPP
 #define ASSIGNMENT3_HOSPITALDISPATCH_HPP
 
-
+/*
+ * Singleton Design Pattern
+ */
 class HospitalDispatch {
 
 public:
